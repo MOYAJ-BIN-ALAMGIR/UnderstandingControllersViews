@@ -10,6 +10,10 @@ namespace UnderstandingControllersViews.Controllers
         {
             return View();
         }
+        public IActionResult ReceivedDataByParameter(string name, string sex)
+        {
+            return View("ReceivedDataByParameter", $"{name} sex is {sex}");
+        }
         public IActionResult ReceivedDataByRequest()
         {
             string name = Request.Form["name"];
