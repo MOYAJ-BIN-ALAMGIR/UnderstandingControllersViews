@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Person
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -7,16 +8,17 @@
 	<p>Welcome From<b> Index View </b>of<b> Home Controller </b> </p>
 </div> *@
 
-<a href="/Home/ReceivedDataByParameter?name=Jack Sparrow&sex=M" class="link-primary">Primary Link</a>
+@* <a href="/Home/ReceivedDataByParameter?name=Jack Sparrow&sex=M" class="link-primary">Primary Link</a> *@
 
-<form asp-action="ReceivedDataByParameter">
+@* <form asp-action="ReceivedDataByParameter"> *@
+<form asp-action="ReceivedDataByModelBinding">
 	<div class="form-group">
 		<label>Name:</label>
-		<input class="form-control" name="name"/>
+		<input class="form-control" asp-for="name"/>
 	</div>
 	<div class="form-group">
 		<label>Sex:</label>
-		<select class="form-control" name="sex">
+		<select class="form-control" asp-for="sex">
 			<option value="M">Male</option>
 			<option value="F">Female</option>
 		</select>
