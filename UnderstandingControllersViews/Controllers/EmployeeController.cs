@@ -5,16 +5,16 @@ namespace UnderstandingControllersViews.Controllers
 {
     public class EmployeeController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //public IActionResult Index(int id, string name)
-        //{
-        //    string welcomeMessage = $"Welcome Employee: {name} with id :{id}";
-        //    return View((object)welcomeMessage);
-        //}
+        public IActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Index(int id, string name)
+        {
+            string welcomeMessage = $"Welcome Employee: {name} with id :{id}";
+            return View((object)welcomeMessage);
+        }
         public IActionResult Detail()
         {
             return View();
@@ -29,6 +29,13 @@ namespace UnderstandingControllersViews.Controllers
             emp.Degignation = "Manager";
             emp.Address = "Bangladesh";
             return View(emp);
+        }
+
+        public IActionResult ViewBagExample()
+        {
+            ViewBag.CurrentDateTime = DateTime.Now;
+            ViewBag.CurrentYear = DateTime.Now.Year;
+            return View();
         }
     }
 }
