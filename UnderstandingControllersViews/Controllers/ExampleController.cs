@@ -25,5 +25,12 @@ namespace UnderstandingControllersViews.Controllers
         {
             return View();
         }
+        
+        public IActionResult SessionExample()
+        {
+            HttpContext.Session.SetString("CurrentDateTime", DateTime.Now.ToString());
+            HttpContext.Session.SetInt32("CurrentYear", DateTime.Now.Year);
+            return View();
+        }
     }
 }
