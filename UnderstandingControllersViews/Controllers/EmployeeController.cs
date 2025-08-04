@@ -31,11 +31,6 @@ namespace UnderstandingControllersViews.Controllers
             return View(emp);
         }
 
-        public IActionResult ViewBagExample()
-        {
-            ViewBag.CurrentDateTime = DateTime.Now;
-            ViewBag.CurrentYear = DateTime.Now.Year;
-            return View();
-        }
+       
     }
 }
