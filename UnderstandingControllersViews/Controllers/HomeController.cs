@@ -42,5 +42,10 @@ namespace UnderstandingControllersViews.Controllers
         {
             return View("ReceivedDataByModelBinding", person);
         }
+
+        public IActionResult CallSharedView()
+        {
+            return View();
+        }
     }
 }

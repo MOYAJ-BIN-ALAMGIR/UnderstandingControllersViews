@@ -38,5 +38,10 @@ namespace UnderstandingControllersViews.Controllers
         }
 
         public RedirectResult RedirectAction() => Redirect("/List/Search");
+
+        public IActionResult CallSharedView()
+        {
+            return View();
+        }
     }
 }
