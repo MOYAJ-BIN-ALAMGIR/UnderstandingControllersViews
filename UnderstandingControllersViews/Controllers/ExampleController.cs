@@ -36,5 +36,7 @@ namespace UnderstandingControllersViews.Controllers
             HttpContext.Session.SetInt32("CurrentYear", DateTime.Now.Year);
             return View();
         }
+
+        public RedirectResult RedirectAction() => Redirect("/List/Search");
     }
 }

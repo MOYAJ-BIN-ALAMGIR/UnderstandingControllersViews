@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace UnderstandingControllersViews.Views.ControllerName
+namespace UnderstandingControllersViews.Controllers
 {
     public class CityController : Controller
     {
@@ -8,9 +8,16 @@ namespace UnderstandingControllersViews.Views.ControllerName
         {
             return View();
         }
-        public IActionResult Index()
+        [HttpPost]
+        public IActionResult NewYork(string name, string sex)
         {
             return View();
         }
+
+        public IActionResult Boston()
+        {
+            return View();
+        }
+
     }
 }

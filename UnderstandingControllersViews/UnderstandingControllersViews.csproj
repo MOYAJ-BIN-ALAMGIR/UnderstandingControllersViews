@@ -10,4 +10,8 @@
     <Content Remove="wwwroot\Safe &amp; Natural.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\ControllerName\" />
+  </ItemGroup>
+
 </Project>
