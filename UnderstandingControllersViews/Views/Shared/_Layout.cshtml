@@ -43,11 +43,18 @@
             </div>
         </nav>
     </header>
+
+    @RenderSection("Top")
     <div class="container">
         <main role="main" class="pb-3">
 			@RenderBody()
         </main>
     </div>
+    @RenderSection("Bottom")
+    @RenderSection("Script")
+
+
+
     <footer class="border-top footer text-muted">
         <div class="container">
             ASP.NET Core Site 
