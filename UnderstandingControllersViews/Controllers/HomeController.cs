@@ -47,5 +47,11 @@ namespace UnderstandingControllersViews.Controllers
         {
             return View();
         }
+
+        public IActionResult TestLayout()
+        {
+            ViewBag.Title = "Welcome to Test Layout ";
+            return View();
+        }
     }
 }
