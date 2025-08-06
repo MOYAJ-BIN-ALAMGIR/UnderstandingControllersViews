@@ -1,8 +1,17 @@
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddSession(Options=>
+{
+    Options.Cookie.Name = ".myapp";
+    Options.IdleTimeout = TimeSpan.FromSeconds(10);
+});
 builder.Services.AddControllersWithViews();
-builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 var app = builder.Build();
 

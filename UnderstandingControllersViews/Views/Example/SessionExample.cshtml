@@ -1,6 +1,15 @@
 ﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor httpContextAccessor
+@{
+	var p = httpContextAccessor.HttpContext.Session.Get<Person>("MyPersonClass");
+}
+
+@* <h2>Hello from Session:</h2>
+<p>@p?.name, @p?.sex</p> *@
+
 <h2>
 	Current DateTime & Year:
 	@httpContextAccessor.HttpContext.Session.GetString("CurrentDateTime")
 	@httpContextAccessor.HttpContext.Session.GetInt32("CurrentYear")
 </h2>
+
+<p>@p.name,@p.sex</p>

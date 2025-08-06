@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using UnderstandingControllersViews.Models;
 
 namespace UnderstandingControllersViews.Controllers
 {
@@ -28,6 +29,9 @@ namespace UnderstandingControllersViews.Controllers
         
         public IActionResult SessionExample()
         {
+            Person p = new Person { name = "Moyaj", sex = "Earth" };
+            
+            HttpContext.Session.Set("MyPersonClass", p);
             HttpContext.Session.SetString("CurrentDateTime", DateTime.Now.ToString());
             HttpContext.Session.SetInt32("CurrentYear", DateTime.Now.Year);
             return View();
