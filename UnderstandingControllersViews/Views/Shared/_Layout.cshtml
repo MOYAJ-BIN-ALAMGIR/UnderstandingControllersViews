@@ -44,6 +44,10 @@
         </nav>
     </header>
 
+    <div class="p-3 mb-2 border border-info">
+        @await Component.InvokeAsync("Cart")
+    </div>
+
     @RenderSection("Top")
     <div class="container">
         <main role="main" class="pb-3">
