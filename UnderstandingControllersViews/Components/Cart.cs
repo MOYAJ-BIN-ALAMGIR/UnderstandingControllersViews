@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Html;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewComponents;
 
 namespace UnderstandingControllersViews.Components
 {
@@ -6,7 +8,7 @@ namespace UnderstandingControllersViews.Components
     {
         public IViewComponentResult Invoke()
         {
-            return Content("This is from <h2>View Component</h2>");
+            return new HtmlContentViewComponentResult(new HtmlString("This is from <h2>View Component</h2>"));
         }
     }
 }
