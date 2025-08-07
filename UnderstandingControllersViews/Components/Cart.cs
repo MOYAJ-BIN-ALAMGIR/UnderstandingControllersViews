@@ -4,9 +4,9 @@ namespace UnderstandingControllersViews.Components
 {
     public class Cart:ViewComponent
     {
-        public string Invoke()
+        public IViewComponentResult Invoke()
         {
-            return "This is from View Component";
+            return Content("This is from <h2>View Component</h2>");
         }
     }
 }
