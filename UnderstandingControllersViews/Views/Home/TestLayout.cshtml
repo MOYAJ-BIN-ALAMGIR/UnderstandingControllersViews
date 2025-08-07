@@ -15,3 +15,8 @@
 
 <h2 class="text-primary">Test Layout Start Here </h2>
 <p class="text-success">This text is comming from child view</p>
+
+@await Html.PartialAsync("TestPartialView",new List<string>
+	{
+		"Classic ASP", "ASP.NET Web Forms", "ASP.NET MVC", "ASP.NET Core MVC"
+	})
