@@ -39,7 +39,7 @@ namespace UnderstandingControllersViews.Controllers
             return View("ReceivedDataByRequest", $"{name} sex is {sex}");
         }
         public IActionResult ReceivedDataByModelBinding (Person person)
-        {
+        { 
             return View("ReceivedDataByModelBinding", person);
         }
 
