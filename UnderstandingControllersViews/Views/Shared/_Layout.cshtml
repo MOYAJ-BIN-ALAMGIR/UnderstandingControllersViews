@@ -50,17 +50,17 @@
 
     @await Component.InvokeAsync("PageSize")
 
-    @RenderSection("Top")
+    @* @RenderSection("Top") *@
     <div class="container">
         <main role="main" class="pb-3">
 			@RenderBody()
         </main>
     </div>
-    @RenderSection("Bottom")
+    @* @RenderSection("Bottom")
 
     @RenderSection("Ads")
 
-    @RenderSection("Script",false)
+    @RenderSection("Script",false) *@
 
 
 
