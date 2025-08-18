@@ -48,6 +48,8 @@
         @await Component.InvokeAsync("Cart", new {showCart = true})
     </div>
 
+    @await Component.InvokeAsync("PageSize")
+
     @RenderSection("Top")
     <div class="container">
         <main role="main" class="pb-3">
