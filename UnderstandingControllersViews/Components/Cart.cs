@@ -13,17 +13,25 @@ namespace UnderstandingControllersViews.Components
         {
             this.coupon = coupon;
         }
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(bool showCart)
         {
-            Product[] products = new Product[]
+            Product[] products;
+            if (showCart)
             {
+                products = new Product[]
+                {
                 new Product() { Name = "Women Shoes", Price = 99 },
                 new Product() { Name = "Mens Shirts", Price = 59 },
                 new Product() { Name = "Children Belts", Price = 19 },
                 new Product() { Name = "Girls Socks", Price = 9 }
-            };
-            
-            ViewBag.Coupon = coupon.GetCoupon();
+                };
+            }
+            else
+            {
+                products = new Product[] { };
+            }
+
+                ViewBag.Coupon = coupon.GetCoupon();
             
             return View(products);
 
